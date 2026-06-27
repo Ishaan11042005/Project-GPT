@@ -6,7 +6,7 @@ import Credits from './pages/Credits'
 import Community from './pages/Community'
 import { assets } from './assets/assets'
 import './assets/prism.css' 
-import Loading from './pages/loading'
+import Loading from './pages/Loading'
 const App = () => {
   const [isMenuOpen,setIsMenuOpen]=useState(false)
 
