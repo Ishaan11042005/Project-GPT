@@ -2,6 +2,7 @@ import axios from "axios";
 import Chat from "../models/Chat.js";
 import User from "../models/User.js";
 import imagekit from "../config/imagekit.js";
+import openai from "../config/openai.js";
 
 //Text-bsed 
 export const textMessageController=async(req,res)=>{
@@ -16,7 +17,7 @@ export const textMessageController=async(req,res)=>{
         chat.messages.push({role:"user",content:prompt,
             timestamp:Date.now(),isImage:false})
 
-            const {choices} = await openai.chat.completions.create({
+        const {choices} = await openai.chat.completions.create({
     model: "gemini-3.5-flash",
     messages: [
         {
